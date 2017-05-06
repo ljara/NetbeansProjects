@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+Licensee: Universidad de La Frontera
+License Type: Academic
+-->
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="orm.Compra" table="compra" lazy="false">
+		<id name="id" column="id" type="integer" unsaved-value="0">
+			<generator class="identity">
+			</generator>
+		</id>
+		<property name="medio_pago" column="medio_pago" type="string" length="100" not-null="true" lazy="false"/>
+		<many-to-one name="persona" cascade="lock" column="personaid" class="orm.Persona" not-null="true" lazy="proxy" access="field">
+		</many-to-one>
+		<property name="total_compra" column="total_compra" type="integer" length="10" not-null="true" lazy="false"/>
+		<property name="fecha" column="fecha" type="string" length="25" not-null="true" lazy="false"/>
+		<set name="ORM_Producto_compra" lazy="true" cascade="save-update,lock" inverse="true">
+			<key column="compraid" not-null="true"/>
+			<one-to-many class="orm.Producto_compra"/>
+		</set>
+	</class>
+</hibernate-mapping>

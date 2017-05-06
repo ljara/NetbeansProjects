@@ -1,0 +1,16 @@
+CREATE TABLE persona (id int(10) NOT NULL AUTO_INCREMENT, nombre varchar(100) NOT NULL, apellido_p varchar(100) NOT NULL, apellido_m varchar(100) NOT NULL, email varchar(100) NOT NULL, password varchar(250) NOT NULL, PRIMARY KEY (id));
+CREATE TABLE compra (id int(10) NOT NULL AUTO_INCREMENT, medio_pago varchar(100) NOT NULL, personaid int(10) NOT NULL, total_compra int(10) NOT NULL, fecha varchar(25) NOT NULL, PRIMARY KEY (id));
+CREATE TABLE producto (id int(10) NOT NULL AUTO_INCREMENT, categoriaid int(10) NOT NULL, proveedorid int(10) NOT NULL, nombre varchar(100) NOT NULL, precio int(10) NOT NULL, stock int(10) NOT NULL, PRIMARY KEY (id));
+CREATE TABLE categoria (id int(10) NOT NULL AUTO_INCREMENT, nombre varchar(100) NOT NULL, PRIMARY KEY (id));
+CREATE TABLE proveedor (id int(10) NOT NULL AUTO_INCREMENT, personaid int(10) NOT NULL, nombre varchar(100) NOT NULL, rut int(10) NOT NULL, fono int(10) NOT NULL, direccion varchar(250) NOT NULL, PRIMARY KEY (id));
+CREATE TABLE permisos (id int(10) NOT NULL AUTO_INCREMENT, `desc` varchar(250) NOT NULL, PRIMARY KEY (id));
+CREATE TABLE permisos_persona (id int(10) NOT NULL AUTO_INCREMENT, permisosid int(10) NOT NULL, personaid int(10) NOT NULL, PRIMARY KEY (id));
+CREATE TABLE producto_compra (id int(10) NOT NULL AUTO_INCREMENT, productoid int(10) NOT NULL, compraid int(10) NOT NULL, cantidad int(10) NOT NULL, PRIMARY KEY (id));
+ALTER TABLE producto ADD INDEX FKproducto393903 (categoriaid), ADD CONSTRAINT FKproducto393903 FOREIGN KEY (categoriaid) REFERENCES categoria (id);
+ALTER TABLE producto ADD INDEX FKproducto295508 (proveedorid), ADD CONSTRAINT FKproducto295508 FOREIGN KEY (proveedorid) REFERENCES proveedor (id);
+ALTER TABLE proveedor ADD INDEX FKproveedor485900 (personaid), ADD CONSTRAINT FKproveedor485900 FOREIGN KEY (personaid) REFERENCES persona (id);
+ALTER TABLE permisos_persona ADD INDEX FKpermisos_p647918 (permisosid), ADD CONSTRAINT FKpermisos_p647918 FOREIGN KEY (permisosid) REFERENCES permisos (id);
+ALTER TABLE permisos_persona ADD INDEX FKpermisos_p674569 (personaid), ADD CONSTRAINT FKpermisos_p674569 FOREIGN KEY (personaid) REFERENCES persona (id);
+ALTER TABLE compra ADD INDEX FKcompra61840 (personaid), ADD CONSTRAINT FKcompra61840 FOREIGN KEY (personaid) REFERENCES persona (id);
+ALTER TABLE producto_compra ADD INDEX FKproducto_c480408 (productoid), ADD CONSTRAINT FKproducto_c480408 FOREIGN KEY (productoid) REFERENCES producto (id);
+ALTER TABLE producto_compra ADD INDEX FKproducto_c856996 (compraid), ADD CONSTRAINT FKproducto_c856996 FOREIGN KEY (compraid) REFERENCES compra (id);

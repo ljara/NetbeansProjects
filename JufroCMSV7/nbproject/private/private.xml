@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/1"/>
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/1">
+        <file>file:/C:/Users/Luis/Documents/NetBeansProjects/JufroCMSV7/web/index.jsp</file>
+        <file>file:/C:/Users/Luis/Documents/NetBeansProjects/JufroCMSV7/web/index_1.jsp</file>
+        <file>file:/C:/Users/Luis/Documents/NetBeansProjects/JufroCMSV7/web/gestionUsuario.jsp</file>
+        <file>file:/C:/Users/Luis/Documents/NetBeansProjects/JufroCMSV7/web/administradorRoles.jsp</file>
+        <file>file:/C:/Users/Luis/Documents/NetBeansProjects/JufroCMSV7/web/ingresoRol.jsp</file>
+        <file>file:/C:/Users/Luis/Documents/NetBeansProjects/JufroCMSV7/src/java/miaplicacionweb/Rol.java</file>
+        <file>file:/C:/Users/Luis/Documents/NetBeansProjects/JufroCMSV7/web/administradorUsuarios.jsp</file>
+        <file>file:/C:/Users/Luis/Documents/NetBeansProjects/JufroCMSV7/src/java/miaplicacionweb/Usuario.java</file>
+        <file>file:/C:/Users/Luis/Documents/NetBeansProjects/JufroCMSV7/web/verUsuario.jsp</file>
+        <file>file:/C:/Users/Luis/Documents/NetBeansProjects/JufroCMSV7/web/verRol.jsp</file>
+        <file>file:/C:/Users/Luis/Documents/NetBeansProjects/JufroCMSV7/web/crearPermiso.jsp</file>
+        <file>file:/C:/Users/Luis/Documents/NetBeansProjects/JufroCMSV7/src/java/miaplicacionweb/MiConfiguracion.java</file>
+    </open-files>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/Zimri/Documents/NetBeansProjects/JufroCMS/web/verRol.jsp</file>
+            <file>file:/C:/Users/Zimri/Documents/NetBeansProjects/JufroCMS/web/crearPermiso.jsp</file>
+            <file>file:/C:/Users/Zimri/Documents/NetBeansProjects/JufroCMS/web/layout.html</file>
+            <file>file:/C:/Users/Zimri/Documents/NetBeansProjects/JufroCMS/web/checkLogin.jsp</file>
+            <file>file:/C:/Users/Zimri/Documents/NetBeansProjects/JufroCMS/web/administradorUsuarios.jsp</file>
+            <file>file:/C:/Users/Zimri/Documents/NetBeansProjects/JufroCMS/web/eliminarPermiso.jsp</file>
+            <file>file:/C:/Users/Zimri/Documents/NetBeansProjects/JufroCMS/src/java/miaplicacionweb/Rol.java</file>
+            <file>file:/C:/Users/Zimri/Documents/NetBeansProjects/JufroCMS/src/java/jufroweb/JufroApplication.java</file>
+            <file>file:/C:/Users/Zimri/Documents/NetBeansProjects/JufroCMS/src/java/jufroweb/Content.java</file>
+            <file>file:/C:/Users/Zimri/Documents/NetBeansProjects/JufroCMS/src/java/miaplicacionweb/Permiso.java</file>
+            <file>file:/C:/Users/Zimri/Documents/NetBeansProjects/JufroCMS/src/java/jufroweb/Layout.java</file>
+            <file>file:/C:/Users/Zimri/Documents/NetBeansProjects/JufroCMS/src/java/miaplicacionweb/MiConfiguracionAdmin.java</file>
+        </group>
+    </open-files>
+</project-private>

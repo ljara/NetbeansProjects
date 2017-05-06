@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+ <definitions 
+ xmlns="http://schemas.xmlsoap.org/wsdl/" 
+ xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+ xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="ProductoWS" targetNamespace="http://webservices.services/" xmlns:tns="http://webservices.services/" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsoma="http://schemas.xmlsoap.org/ws/2004/09/policy/optimizedmimeserialization" xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702" xmlns:fi="http://java.sun.com/xml/ns/wsit/2006/09/policy/fastinfoset/service" xmlns:tcp="http://java.sun.com/xml/ns/wsit/2006/09/policy/soaptcp/service" xmlns:wsp1="http://schemas.xmlsoap.org/ws/2004/09/policy" 
+ >
+    <message name="IngresarProducto"/>
+    <message name="IngresarProductoResponse"/>
+    <message name="BuscarProducto"/>
+    <message name="BuscarProductoResponse"/>
+    <message name="ConsultarProductos"/>
+    <message name="ConsultarProductosResponse"/>
+    <portType name="ProductoWS">
+        <operation name="IngresarProducto">
+            <input message="tns:IngresarProducto"/>
+            <output message="tns:IngresarProductoResponse"/>
+        </operation>
+        <operation name="BuscarProducto">
+            <input message="tns:BuscarProducto"/>
+            <output message="tns:BuscarProductoResponse"/>
+        </operation>
+        <operation name="ConsultarProductos">
+            <input message="tns:ConsultarProductos"/>
+            <output message="tns:ConsultarProductosResponse"/>
+        </operation>
+    </portType>
+    <binding name="ProductoWSPortBinding" type="tns:ProductoWS">
+        <wsp:PolicyReference URI="#ProductoWSPortBindingPolicy"/>
+        <operation name="IngresarProducto">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="BuscarProducto">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="ConsultarProductos">
+            <input/>
+            <output/>
+        </operation>
+    </binding>
+    <service name="ProductoWS">
+        <port name="ProductoWSPort" binding="tns:ProductoWSPortBinding"/>
+    </service>
+    <wsp:Policy wsu:Id="ProductoWSPortBinding_hello_Input_Policy">
+        <wsp:ExactlyOne>
+            <wsp:All>
+                <sp:EncryptedParts>
+                    <sp:Body/>
+                </sp:EncryptedParts>
+                <sp:SignedParts>
+                    <sp:Body/>
+                </sp:SignedParts>
+            </wsp:All>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+    <wsp:Policy wsu:Id="ProductoWSPortBinding_hello_Output_Policy">
+        <wsp:ExactlyOne>
+            <wsp:All>
+                <sp:EncryptedParts>
+                    <sp:Body/>
+                </sp:EncryptedParts>
+                <sp:SignedParts>
+                    <sp:Body/>
+                </sp:SignedParts>
+            </wsp:All>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+    <wsp:Policy wsu:Id="ProductoWSPortBindingPolicy">
+        <wsp:ExactlyOne>
+            <wsp:All/>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+</definitions>
